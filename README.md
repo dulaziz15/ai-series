@@ -79,6 +79,23 @@ M4
 24 - 09 - 2026 => Perancangan database dan proses CRUD master LF System
 25 - 09 - 2026 => Melanjutkan Fitur Daily Stock pada LF System
 M5
-28 - 09 - 2026 => 
-29 - 09 - 2026 => 
-30 - 09 - 2026 => 
+28 - 09 - 2026 => Melanjutkan Ending Stock LF dan Adjustmen KMS Multiskill, Job Holder dan Coaching
+29 - 09 - 2026 => Revisi Requirement LF dan Finishing KMS Adjustmen
+30 - 09 - 2026 => Brief QC System dan Explore Project
+
+Oktober 2026
+M1
+01 - 10 - 2026 => Perancangan Database Pengerjaan QC System
+02 - 10 - 2026 => Pembuatan Halaman OEE di QC System
+M2
+05 - 10 - 2026 => Melanjutkan Detail Report OEE Shift
+06 - 10 - 2026 => Melanjutkan Detail Report OEE Shift
+07 - 10 - 2026 => Generate Report Shift Analyst
+08 - 10 - 2026 => Adjustmen Report Shift Analyst
+09 - 10 - 2026 => Membuat Survey Kepuasan Kantin
+M3
+12 - 10 - 2026 => Finishing Pembuatan Survey Kepuasan Kantin
+13 - 10 - 2026 => Izin Tidak Masuk
+14 - 10 - 2026 => Melanjutkan OEE System Pembuatan Send Report Shift
+15 - 10 - 2026 => Melanjutkan OEE System Pembuatan Schema Export Report
+16 - 10 - 2026 => Adjusment Tampilan report dan send report
