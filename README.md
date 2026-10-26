@@ -223,3 +223,229 @@ Untuk menjaga fokus dan kelayakan penelitian, batasan masalah ditetapkan sebagai
 
 
 
+Tentu! Sesuai permintaan Anda, kita akan membedah setiap elemen judul ini secara mendalam dengan format **apa itu** dan **mengapa dipilih (disertai alasannya dibanding pendekatan alternatif)**, persis seperti analogi DCC-GARCH dan GNN yang Anda sebutkan.
+
+Berikut adalah detail lengkap per variabel dan kata dalam judul penelitian Anda:
+
+---
+
+### 1. CONTAGION RISK (Risiko Penularan)
+
+* **Penjelasan:** Fenomena di mana guncangan, kepanikan, atau penurunan harga yang terjadi pada satu emiten/sektor dengan cepat menjalar dan menularkan tekanan ke emiten/sektor lainnya di pasar keuangan.
+* **Kenapa menggunakan ini?** Karena krisis di pasar keuangan modern tidak pernah terjadi secara terisolasi. Dengan fokus pada *contagion risk*, penelitian Anda tidak hanya melihat "seberapa besar risiko suatu saham", tetapi **"bagaimana risiko itu menular dan memicu efek domino"**. Ini sangat krusial untuk mitigasi risiko sistemik.
+* **Pembandingnya:** Analisis risiko individual (seperti *Value at Risk* / VaR atau GARCH univariat standar) yang hanya menghitung risiko masing-masing saham secara terpisah tanpa peduli apakah saham tersebut menularkan masalah ke saham lain atau tidak.
+
+### 2. PASAR SAHAM INDONESIA
+
+* **Penjelasan:** Objek empiris penelitian yang mencakup emiten-emiten yang terdaftar di Bursa Efek Indonesia (BEI), misalnya saham-saham likuid seperti LQ45 atau IDX80.
+* **Kenapa menggunakan ini?** Pasar saham Indonesia (*emerging market*) memiliki karakteristik unik: sangat sensitif terhadap sentimen global, aliran modal asing (*capital flows*), serta didominasi oleh beberapa saham penggerak (*heavyweights*). Dinamika penularan krisis di pasar berkembang sering kali jauh lebih liar dan cepat dibanding pasar maju.
+* **Pembandingnya:** Pasar saham negara maju (seperti S&P 500 di AS atau bursa Eropa) yang memiliki likuiditas lebih dalam, struktur pasar lebih matang, dan pola penularan yang berbeda.
+
+### 3. DCC-GARCH *(Dynamic Conditional Correlation - Generalized Autoregressive Conditional Heteroskedasticity)*
+
+* **Penjelasan:** Model ekonometrika keuangan multivariat yang digunakan untuk mengestimasi volatilitas sekaligus korelasi antar aset yang berubah-ubah seiring waktu (*time-varying*).
+* **Kenapa menggunakan ini?** Karena di dunia nyata, hubungan (korelasi) antar saham **tidak pernah konstan**. Saat pasar normal, korelasi antar saham mungkin rendah; namun saat terjadi krisis, korelasi mendadak melonjak drastis (kepanikan massal). DCC-GARCH mampu menangkap dinamika perubahan korelasi real-time ini secara akurat.
+* **Pembandingnya:** Korelasi statis konvensional (seperti korelasi Pearson atau Spearman sepanjang periode penelitian). Korelasi statis menganggap hubungan antar saham dari awal tahun hingga akhir tahun adalah angka yang sama, yang mana sangat tidak realistis dan gagal menangkap kepanikan pasar saat krisis terjadi.
+
+### 4. GRAF KORELASI DINAMIS ANTAR SAHAM
+
+* **Penjelasan:** Bentuk representasi data di mana setiap saham direpresentasikan sebagai titik (*node*) dan kekuatan korelasi antar saham (hasil hitungan DCC-GARCH) direpresentasikan sebagai garis penghubung (*edge*) yang bentuk serta bobotnya berubah setiap periode waktu.
+* **Kenapa menggunakan ini?** Karena angka-angka matriks korelasi yang dihasilkan DCC-GARCH jika dibiarkan berbentuk tabel mentah akan sangat sulit dianalisis. Mengubahnya menjadi "Graf Dinamis" memungkinkan kita melihat peta jaringan pasar yang hidup—menunjukkan emiten mana yang sedang menjadi pusat penularan (*hub*) dari waktu ke waktu.
+* **Pembandingnya:** Matriks tabel angka konvensional (seperti *matrix correlation table* di Excel) yang statis, tidak bisa divisualisasikan sebagai jaringan, dan menyulitkan pembacaan pola interaksi antar banyak emiten sekaligus.
+
+### 5. GRAPH NEURAL NETWORK / GNN
+
+* **Penjelasan:** Cabang dari *Deep Learning* yang dirancang khusus untuk memproses data yang terstruktur dalam bentuk jaringan atau graf (*nodes* dan *edges*).
+* **Kenapa menggunakan ini?** Seperti yang Anda katakan: **kita tidak fokus untuk menganalisis satu entitas secara terisolasi, melainkan fokus pada persebaran/penjalaran (spread/propagation), dan GNN memiliki kerangka kerja yang memang diciptakan untuk itu**. GNN dapat membaca bagaimana sebuah guncangan mengalir dari satu *node* ke *node* tetangga melalui *edges* (korelasi dinamis), sesuatu yang tidak bisa dilakukan oleh AI biasa.
+* **Pembandingnya:** *Deep Learning* sekuensial standar seperti LSTM, GRU, atau *Transformer* univariat. Model-model tersebut hanya memproses data historis harga saham secara terpisah per emiten (menganggap saham A dan saham B tidak saling terhubung secara spasial), sehingga gagal mendeteksi efek penularan jaringan (*contagion path*).
+
+---
+
+Dengan penjelasan detail di atas, narasi latar belakang (*background*) untuk proposal atau tesis Anda akan menjadi sangat kuat karena setiap kata dalam judul Anda memiliki alasan metodologis yang saling mengunci secara logis!
+
+
+
+
+
+
+Untuk memperkuat landasan teoretis dan metodologis proposal atau tesis Anda, daftar pustaka perlu dibagi menjadi beberapa klaster utama. Klaster ini merentang dari **ekonometrika keuangan klasik** (dasar DCC-GARCH), **teori jejaring risiko sistemik**, hingga **penerapan AI modern (*Graph Neural Network*)** pada analisis pasar keuangan.
+
+Berikut adalah rujukan literatur wajib dan peta pustaka yang dapat Anda jadikan acuan utama:
+
+---
+
+### 1. Klaster Fondasi Ekonometrika & Volatilitas (DCC-GARCH)
+
+Klaster ini digunakan untuk memperkuat bab metodologi terkait bagaimana korelasi dan volatilitas antar saham dihitung secara dinamis.
+
+* **Engle, R. (2002).** *Dynamic Conditional Correlation: A Simple Class of Multivariate Generalized Autoregressive Conditional Heteroskedasticity Models*. **Journal of Business & Economic Statistics**, 20(3), 339-350.
+* *Fungsi untuk Tesis Anda:* Ini adalah **paper wajib utama (foundational paper)** penemu metode DCC-GARCH. Menjadi rujukan utama ketika Anda menjelaskan rumus matematika pembentukan matriks korelasi kondisional yang berubah seiring waktu.
+
+
+* **Bollerslev, T. (1986).** *Generalized Autoregressive Conditional Heteroskedasticity*. **Journal of Econometrics**, 31(3), 307-327.
+* *Fungsi untuk Tesis Anda:* Landasan historis model GARCH univariat yang menjadi akar pengembangan model-model multivariat di bawahnya.
+
+
+
+---
+
+### 2. Klaster Teori Risiko Penularan (*Contagion Risk* & *Financial Networks*)
+
+Klaster ini digunakan untuk membangun argumen di bab Pendahuluan/Tinjauan Pustaka mengenai mengapa guncangan pasar dapat menular dan bagaimana struktur jaringan finansial terbentuk.
+
+* **Diebold, F. X., & Yilmaz, K. (2014).** *On the Network Topology of Variance Decompositions: Measuring the Connectedness of Financial Firms*. **Journal of Econometrics**, 182(1), 119-134.
+* *Fungsi untuk Tesis Anda:* Literatur klasik yang mempopulerkan pendekatan berbasis jaringan (*network topology*) dalam melihat limpahan risiko (*spillover*) di pasar keuangan. Sangat bagus dijadikan pembanding atau landasan konseptual graf.
+
+
+* **Allen, F., & Gale, D. (2000).** *Financial Contagion*. **Journal of Political Economy**, 108(1), 1-33.
+* *Fungsi untuk Tesis Anda:* Landasan teoretis fundamental mengenai bagaimana kepanikan atau guncangan pada satu titik institusi/aset dapat memicu efek domino (*contagion*) ke seluruh sistem ekonomi.
+
+
+
+---
+
+### 3. Klaster *Graph Neural Network* (GNN) & AI dalam Keuangan
+
+Klaster ini mendukung bagian metode *Deep Learning* Anda, menjelaskan mengapa GNN dipilih untuk membaca struktur graf dinamis daripada model AI konvensional.
+
+* **Kipf, T. N., & Welling, M. (2017).** *Semi-Supervised Classification with Graph Convolutional Networks*. **Proceedings of International Conference on Learning Representations (ICLR)**.
+* *Fungsi untuk Tesis Anda:* Paper rujukan utama untuk arsitektur *Graph Convolutional Networks* (GCN) yang sering menjadi fondasi dasar pemrosesan data spasial berbasis graf.
+
+
+* **Studi Literatur Terkini (Recent Studies on GNN for Systemic Risk & Shock Propagation):**
+* Cari jurnal-jurnal bereputasi (seperti *Expert Systems with Applications*, *Journal of Financial Stability*, atau *IEEE Transactions on Neural Networks and Learning Systems*) dengan kata kunci: **"Graph Neural Network for Systeming Risk Forecasting"** atau **"Dynamic Graph Neural Networks for Stock Market Shock Propagation"**.
+* *Fungsi untuk Tesis Anda:* Menunjukkan bahwa penggunaan GNN dengan *dynamic edges* untuk pemodelan penjalaran krisis (*contagion*) adalah pendekatan *state-of-the-art* (mutakhir) di literatur riset keuangan global saat ini.
+
+
+
+---
+
+### 4. Klaster Kontekstual Pasar Saham Indonesia & *Emerging Markets*
+
+Klaster ini digunakan untuk memperkuat bagian objek penelitian (*empirical setting*) di Bab Pendahuluan atau Metodologi.
+
+* **Jurnal-jurnal Nasional Terakreditasi SINTA 1 / SINTA 2** atau **Jurnal Internasional Bereputasi (Scopus)** yang spesifik meneliti tentang:
+* *Volatilitas Pasar Saham Indonesia* (misalnya dinamika indeks LQ45 atau IDX80).
+* *Integration and Contagion in ASEAN / Emerging Equity Markets*.
+* *Fungsi untuk Tesis Anda:* Memberikan justifikasi empiris mengenai karakteristik unik pasar saham Indonesia yang rentan terhadap guncangan eksternal maupun internal, sehingga analisis risiko penularan (*contagion risk*) menjadi sangat urgen untuk dilakukan.
+
+
+
+---
+
+### Tips Menyusun di Daftar Pustaka:
+
+1. Pastikan proporsi literatur seimbang: **30% teori dasar ekonometrika (DCC-GARCH)**, **30% konsep risiko penularan/jaringan**, dan **40% penerapan teknologi terbaru (GNN dalam *finance*)**.
+2. Usahakan mencari beberapa jurnal pendukung tambahan dari 3–5 tahun terakhir (2021–2026) untuk menunjukkan bahwa topik penggabungan DCC-GARCH dan GNN ini memang sedang menjadi tren riset global yang mutakhir.
+
+
+Berikut adalah penjelasan rinci mengenai **fungsi spesifik** dari masing-masing 20 jurnal/literatur tersebut jika diaplikasikan ke dalam bab-bab tesis Anda (terutama pada Bab 1 Pendahuluan, Bab 2 Tinjauan Pustaka, dan Bab 3 Metodologi Penelitian):
+
+---
+
+### Klaster 1: Fondasi Ekonometrika & Model Volatilitas Multivariat (DCC-GARCH)
+
+*Fungsi Utama: Digunakan di Bab Metodologi untuk membangun model matematis penghitungan korelasi dinamis antar saham.*
+
+1. **Engle (2002) – *Dynamic Conditional Correlation***
+* **Fungsi di Tesis:** Menjadi **rujukan utama (primary baseline)** untuk rumus matematika DCC-GARCH yang Anda gunakan untuk mengekstrak matriks korelasi waktu nyata (*time-varying*) antar saham di BEI.
+
+
+2. **Bollerslev (1986) – *Generalized Autoregressive Conditional Heteroskedasticity***
+* **Fungsi di Tesis:** Landasan teoretis awal untuk menjelaskan konsep volatilitas bersyarat (*conditional volatility*) univariat yang menjadi fondasi dasar sebelum dikembangkan ke model multivariat.
+
+
+3. **Nelson (1991) – *EGARCH***
+* **Fungsi di Tesis:** Digunakan untuk menjelaskan fenomena *asymmetry* atau efek *leverage* (pasar merespons berita buruk berbeda dengan berita baik) jika Anda ingin memperkaya spesifikasi model GARCH sebelum dimasukkan ke matriks korelasi.
+
+
+4. **Engle & Kroner (1995) – *Multivariate Simultaneous GARCH***
+* **Fungsi di Tesis:** Memberikan pembanding teoretis mengapa model multivariat kompleks seperti BEKK digunakan atau mengapa Anda memilih DCC-GARCH sebagai alternatif yang lebih efisien untuk jumlah saham yang banyak.
+
+
+5. **Tse & Tsui (2002) – *Time-Varying Correlations***
+* **Fungsi di Tesis:** Sebagai rujukan alternatif model korelasi dinamis berbasis bobot bergerak (*moving average*) untuk memperkuat argumen pemilihan spesifikasi DCC Anda.
+
+
+6. **Baillie, Bollerslev, & Mikkelsen (1996) – *FIGARCH***
+* **Fungsi di Tesis:** Mendukung argumen literatur mengenai memori jangka panjang (*long memory*) pada volatilitas aset keuangan.
+
+
+
+---
+
+### Klaster 2: Teori Risiko Penularan (*Contagion Risk*) & Topologi Jaringan Keuangan
+
+*Fungsi Utama: Digunakan di Bab Pendahuluan & Tinjauan Pustaka untuk membangun argumen mengapa penjalaran krisis itu penting dan bagaimana struktur jaringan terbentuk.*
+
+7. **Diebold & Yilmaz (2014) – *Network Topology of Variance Decompositions***
+* **Fungsi di Tesis:** Sebagai pembanding metode jaringan konvensional berbasis *variance decomposition* (VAR) untuk menunjukkan bahwa pendekatan Anda (DCC-GARCH + GNN) menawarkan perspektif yang lebih mendalam secara non-linear.
+
+
+8. **Diebold & Yilmaz (2009) – *Measuring Financial Asset Return and Volatility Spillovers***
+* **Fungsi di Tesis:** Membangun definisi operasional mengenai *spillover* (limpahan risiko) antaraset yang menjadi indikator awal sebelum risiko berubah menjadi *contagion*.
+
+
+9. **Allen & Gale (2000) – *Financial Contagion***
+* **Fungsi di Tesis:** Landasan teoretis fundamental ekonomi makro/keuangan mengenai bagaimana guncangan di satu titik dapat memicu efek domino sistemik akibat keterhubungan jaringan.
+
+
+10. **Forbes & Rigobon (2002) – *No Contagion, Only Interdependence***
+* **Fungsi di Tesis:** Digunakan untuk membedakan secara akademis antara fenomena *interdependence* (ketergantungan normal) dan *contagion* (penularan krisis sejati yang ditandai lonjakan korelasi ekstrem).
+
+
+11. **Billio et al. (2012) – *Systemic Risk and Connectedness***
+* **Fungsi di Tesis:** Mendukung argumen pengukuran risiko sistemik menggunakan matriks keterhubungan (*connectedness measures*) antarlembaga atau aset keuangan.
+
+
+12. **Corsetti, Pericoli, & Sbracia (2005) – *Pitfalls in Tests of Financial Contagion***
+* **Fungsi di Tesis:** Digunakan sebagai tinjauan kritis dalam mendesain metodologi agar pengujian *contagion risk* Anda bebas dari bias kesalahan statistik akibat volatilitas pasar yang tinggi.
+
+
+
+---
+
+### Klaster 3: Graph Neural Networks (GNN) & Deep Learning dalam Keuangan
+
+*Fungsi Utama: Digunakan di Bab Metodologi untuk menjustifikasi mengapa AI berbasis graf dipilih untuk membaca hubungan antar saham.*
+
+13. **Kipf & Welling (2017) – *Graph Convolutional Networks (GCN)***
+
+* **Fungsi di Tesis:** Menjadi **fondasi arsitektur AI utama** Anda dalam menjelaskan bagaimana lapisan konvolusi pada graf bekerja untuk menggabungkan informasi fitur saham dan tetangganya (*node embeddings*).
+
+14. **Velickovic et al. (2018) – *Graph Attention Networks (GAT)***
+
+* **Fungsi di Tesis:** Memberikan justifikasi jika Anda ingin menggunakan mekanisme perhatian (*attention mechanism*) untuk menentukan bobot korelasi mana yang paling krusial dalam penularan risiko.
+
+15. **Wu et al. (2020) – *A Comprehensive Survey on Graph Neural Networks***
+
+* **Fungsi di Tesis:** Digunakan dalam tinjauan pustaka untuk memetakan perkembangan GNN secara komprehensif dan memposisikan riset Anda pada ranah *financial network forecasting*.
+
+16. **Hamilton, Ying, & Leskovec (2017) – *Inductive Representation Learning (GraphSAGE)***
+
+* **Fungsi di Tesis:** Mendukung fleksibilitas model GNN Anda jika diterapkan untuk memprediksi struktur graf baru yang dinamis dari waktu ke waktu (*inductive learning*).
+
+---
+
+### Klaster 4: Dinamika Pasar Saham, Integrasi, & *Emerging Markets*
+
+*Fungsi Utama: Digunakan di Bab Pendahuluan untuk memperkuat alasan mengapa objek penelitian adalah Pasar Saham Indonesia.*
+
+17. **Bekaert & Harvey (1997) – *Emerging Equity Market Volatility***
+
+* **Fungsi di Tesis:** Menjelaskan karakteristik khusus pasar berkembang (*emerging markets*), seperti volatilitas yang lebih tinggi dan sensitivitas terhadap guncangan eksternal.
+
+18. **Claessens & Forbes (2001) – *International Financial Contagion***
+
+* **Fungsi di Tesis:** Buku rujukan untuk memperkuat pemahaman mengenai bagaimana penularan keuangan menyebar lintas batas dan domestik.
+
+19. **Levine & Zervos (1998) – *Stock Markets and Economic Growth***
+
+* **Fungsi di Tesis:** Menjelaskan pentingnya likuiditas dan peran strategis pasar saham dalam perekonomian nasional.
+
+20. **Phylaktis & Ravazzolo (2002) – *Financial and Monetary Integration***
+
+* **Fungsi di Tesis:** Mendukung argumen mengenai bagaimana keterkaitan pasar keuangan domestik dengan dinamika global membentuk pola korelasi aset.
+
+
+
