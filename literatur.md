@@ -45,3 +45,6 @@
 
 ### [On the use of flexible rolling-window estimation for macroeconomic forecasting](https://sciencedirect.com)
 *   **Penjelasan Singkat:** Jurnal ini memberikan fondasi ekonometrika mengenai pentingnya ukuran jendela bergerak (*rolling window*) yang fleksibel untuk peramalan runtun waktu, yang berguna untuk membantu model machine learning beradaptasi terhadap perubahan rezim pasar (misal dari kondisi ekonomi normal ke kondisi krisis).
+
+
+https://www.gc.cuny.edu/sites/default/files/2021-07/dieboldandyilmaz_CUNY.pdf
